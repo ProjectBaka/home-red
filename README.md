@@ -35,5 +35,6 @@ ruby bin/rails db:migrate RAILS_ENV=development
 ruby bin/rails generate scaffold location name:string notes:text
 ruby bin/rails db:migrate RAILS_ENV=development
 
-#rails generate migration AddCategoryIdToProducts category_id:integer
+ruby bin/rails generate migration AddLocationIdToItems location_id:integer
+ruby bin/rails db:migrate RAILS_ENV=development
 ```
