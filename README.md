@@ -27,4 +27,5 @@ Things you may want to cover:
 ```bash
 sudo apt-get install libsqlite3-dev
 rails new baka-home --skip
+ruby bin/rails generate scaffold item name:string notes:text barcode:string valid_to:datetime
 ```
