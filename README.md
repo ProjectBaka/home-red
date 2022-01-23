@@ -25,7 +25,15 @@ Things you may want to cover:
 
 # Project generation
 ```bash
+# one time
 sudo apt-get install libsqlite3-dev
 rails new baka-home --skip
+
 ruby bin/rails generate scaffold item name:string notes:text barcode:string valid_to:datetime
+ruby bin/rails db:migrate RAILS_ENV=development
+
+ruby bin/rails generate scaffold location name:string notes:text
+ruby bin/rails db:migrate RAILS_ENV=development
+
+#rails generate migration AddCategoryIdToProducts category_id:integer
 ```
