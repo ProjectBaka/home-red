@@ -22,3 +22,9 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+# Project generation
+```bash
+sudo apt-get install libsqlite3-dev
+rails new baka-home --skip
+```
