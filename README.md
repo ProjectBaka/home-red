@@ -42,4 +42,7 @@ ruby bin/rails db:migrate RAILS_ENV=development
 # https://stackoverflow.com/questions/13445367/create-relationships-when-scaffolding
 #ruby bin/rails generate scaffold_controller item name:string notes:text barcode:string valid_to:datetime location:references --skip-collision-check
 ruby bin/rails generate scaffold_controller item name:string notes:text barcode:string valid_to:datetime location:belongs_to --skip-collision-check
+
+ruby bin/rails generate scaffold brand name:string notes:text
+ruby bin/rails db:migrate RAILS_ENV=development
 ```
