@@ -50,4 +50,7 @@ ruby bin/rails generate migration AddBrandIdToItems brand_id:integer
 ruby bin/rails db:migrate RAILS_ENV=development
 
 ruby bin/rails generate scaffold_controller item name:string notes:text barcode:string valid_to:datetime location:belongs_to brand:belongs_to --skip-collision-check
+
+# enable live updates with redis
+./bin/rails turbo:install:redis
 ```
