@@ -20,13 +20,21 @@
   </p>
 
   <p>
+    <strong>Brand:</strong>
+    <% Brand.all.each do |brand| %>
+      <% if brand.id == item.brand_id %>
+        <%= brand.name %>
+      <% end %>
+    <% end %>
+  </p>
+
+  <p>
     <strong>Location:</strong>
     <% Location.all.each do |location| %>
       <% if location.id == item.location_id %>
         <%= location.name %>
       <% end %>
     <% end %>
-
   </p>
 
 </div>

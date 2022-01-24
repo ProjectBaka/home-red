@@ -15,6 +15,7 @@ class ItemsTest < ApplicationSystemTestCase
     click_on "New item"
 
     fill_in "Barcode", with: @item.barcode
+    fill_in "Brand", with: @item.brand_id
     fill_in "Location", with: @item.location_id
     fill_in "Name", with: @item.name
     fill_in "Notes", with: @item.notes
@@ -30,6 +31,7 @@ class ItemsTest < ApplicationSystemTestCase
     click_on "Edit this item", match: :first
 
     fill_in "Barcode", with: @item.barcode
+    fill_in "Brand", with: @item.brand_id
     fill_in "Location", with: @item.location_id
     fill_in "Name", with: @item.name
     fill_in "Notes", with: @item.notes

@@ -33,6 +33,17 @@
   </div>
 
   <div>
+    <%= form.label :brand_id, style: "display: block" %>
+    <select name="item[brand_id]" id="item_brand_id">
+      <% Brand.all.each do |brand| %>
+        <option value="<%= brand.id %>">
+          <%= brand.name %>
+        </option>
+      <% end %>
+    </select>
+  </div>
+
+  <div>
     <%= form.label :location_id, style: "display: block" %>
     <select name="item[location_id]" id="item_location_id">
       <% Location.all.each do |location| %>
