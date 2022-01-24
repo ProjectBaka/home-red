@@ -37,4 +37,9 @@ ruby bin/rails db:migrate RAILS_ENV=development
 
 ruby bin/rails generate migration AddLocationIdToItems location_id:integer
 ruby bin/rails db:migrate RAILS_ENV=development
+
+# https://guides.rubyonrails.org/association_basics.html
+# https://stackoverflow.com/questions/13445367/create-relationships-when-scaffolding
+#ruby bin/rails generate scaffold_controller item name:string notes:text barcode:string valid_to:datetime location:references --skip-collision-check
+ruby bin/rails generate scaffold_controller item name:string notes:text barcode:string valid_to:datetime location:belongs_to --skip-collision-check
 ```

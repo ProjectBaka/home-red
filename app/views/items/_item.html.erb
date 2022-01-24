@@ -19,4 +19,14 @@
     <%= item.valid_to %>
   </p>
 
+  <p>
+    <strong>Location:</strong>
+    <% Location.all.each do |location| %>
+      <% if location.id == item.location_id %>
+        <%= location.name %>
+      <% end %>
+    <% end %>
+
+  </p>
+
 </div>
