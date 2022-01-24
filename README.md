@@ -45,4 +45,7 @@ ruby bin/rails generate scaffold_controller item name:string notes:text barcode:
 
 ruby bin/rails generate scaffold brand name:string notes:text
 ruby bin/rails db:migrate RAILS_ENV=development
+
+ruby bin/rails generate migration AddBrandIdToItems brand_id:integer
+ruby bin/rails db:migrate RAILS_ENV=development
 ```
