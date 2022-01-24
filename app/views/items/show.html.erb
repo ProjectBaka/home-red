@@ -1,6 +1,9 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @item %>
+<%= turbo_stream_from "item" %>
+<%= turbo_frame_tag "item" do %>
+  <%= render @item %>
+<% end %>
 
 <div>
   <%= link_to "Edit this item", edit_item_path(@item) %> |
