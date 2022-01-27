@@ -1,29 +1,26 @@
-# README
+# Baka Home
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project make current trends opposite - baka home, smart user.  
+The plan is to write app which helps maintaining pantry and more not edible stuff too.  
+Something like warehouse software but for home.  
+This will NOT be replacement for app like Home Assistant or Domoticz, more like nice addition to them.
 
-Things you may want to cover:
+## Docs TODO
 
 * Ruby version
-
 * System dependencies
-
 * Configuration
-
 * Database creation
-
 * Database initialization
-
 * How to run the test suite
-
 * Services (job queues, cache servers, search engines, etc.)
-
 * Deployment instructions
 
-* ...
+## Project generation
 
-# Project generation
+Notes what commands were used to generate project.  
+This is author's first rail project so this can be useful :)
+
 ```bash
 # one time
 sudo apt-get install libsqlite3-dev
@@ -53,4 +50,8 @@ ruby bin/rails generate scaffold_controller item name:string notes:text barcode:
 
 # enable live updates with redis
 ./bin/rails turbo:install:redis
+
+# enable tailwindcss
+./bin/bundle add tailwindcss-rails
+./bin/rails tailwindcss:install
 ```
