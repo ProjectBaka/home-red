@@ -17,5 +17,7 @@ module.exports = {
     require('@tailwindcss/forms'),
     require('@tailwindcss/aspect-ratio'),
     require('@tailwindcss/typography'),
+    // used by items gallery view
+    require('@tailwindcss/aspect-ratio'),
   ]
 }
