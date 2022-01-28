@@ -1,12 +1,14 @@
-<div id="<%= dom_id brand %>">
-  <p>
-    <strong>Name:</strong>
-    <%= brand.name %>
-  </p>
-
-  <p>
-    <strong>Notes:</strong>
+<tr id="<%= dom_id brand %>" class="bg-white border-b">
+  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+    <%= link_to brand.id, brand %>
+  </td>
+  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+    <%= link_to brand.name, brand %>
+  </td>
+  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
     <%= brand.notes %>
-  </p>
-
-</div>
+  </td>
+  <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
+    <%= brand.created_at %>
+  </td>
+</tr>
