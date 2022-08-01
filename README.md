@@ -54,4 +54,13 @@ ruby bin/rails generate scaffold_controller item name:string notes:text barcode:
 # enable tailwindcss
 ./bin/bundle add tailwindcss-rails
 ./bin/rails tailwindcss:install
+
+# change DB to postgres
+rails db:system:change --to=postgresql
+apt install libpq-dev
+bundle install
+
+# deploy to railway
+railway up
+railway run rake db:migrate
 ```
