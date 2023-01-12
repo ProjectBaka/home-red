@@ -5,7 +5,7 @@ ruby "3.0.0"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.1"
-
+gem "sassc-rails" 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
@@ -72,3 +72,5 @@ group :test do
 end
 
 gem "tailwindcss-rails", "~> 2.0"
+gem "datagrid", "~> 1.6.3"
+gem "kaminari"
