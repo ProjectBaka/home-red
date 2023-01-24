@@ -1,9 +1,14 @@
 class BrandsController < ApplicationController
+  def grid_params
+    params.fetch(:brands_grid, {}).permit!
+  end
   before_action :set_brand, only: %i[ show edit update destroy ]
 
   # GET /brands or /brands.json
   def index
-    @brands = Brand.all
+    @grid = BrandsGrid.new(grid_params) do |scope|
+      scope.page(params[:page])
+    end
   end
 
   # GET /brands/1 or /brands/1.json

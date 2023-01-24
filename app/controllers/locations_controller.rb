@@ -1,9 +1,16 @@
 class LocationsController < ApplicationController
+
+
+  def grid_params
+    params.fetch(:locations_grid, {}).permit!
+  end
   before_action :set_location, only: %i[ show edit update destroy ]
 
   # GET /locations or /locations.json
   def index
-    @locations = Location.all
+    @grid = LocationsGrid.new(grid_params) do |scope|
+      scope.page(params[:page])
+    end
   end
 
   # GET /locations/1 or /locations/1.json
