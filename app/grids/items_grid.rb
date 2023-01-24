@@ -7,7 +7,15 @@ class ItemsGrid < BaseGrid
 
   column(:id)
   column(:name)
-  date_column(:created_at)
+  column(:brand) do |item|
+    item.brand.name
+  end
+  column(:valid_to)
+  column(:location) do |item|
+    item.location.name
+  end
+  column(:barcode)
+
   column(:actions, :html => true) do |item|
     puts item.name
     render "items/actions", item: item
