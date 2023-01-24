@@ -63,4 +63,13 @@ bundle install
 # deploy to railway
 railway up
 railway run rake db:migrate
+
+# copy partials for ease of styling 
+rake datagrid:copy_partials
+
+# generate datagrid for models
+rails g datagrid:scaffold item
+rails g datagrid:scaffold brand
+rails g datagrid:scaffold location
+
 ```
