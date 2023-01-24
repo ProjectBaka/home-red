@@ -17,7 +17,6 @@ class ItemsGrid < BaseGrid
   column(:barcode)
 
   column(:actions, :html => true) do |item|
-    puts item.name
     render "items/actions", item: item
   end
 end
