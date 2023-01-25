@@ -74,3 +74,4 @@ end
 gem "tailwindcss-rails", "~> 2.0"
 gem 'datagrid', '~> 1.4', '>= 1.4.4'
 gem "kaminari"
+gem "faker"
