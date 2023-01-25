@@ -6,12 +6,21 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-locations = Location.create([{ name: "Fridge" }, { name: "Cupboard" }, { name: "Basement" }])
-brands = Brand.create([{ name: "Coca-Cola" }, { name: "Nestle" }, { name: "Homemade" }])
-Item.create(
-  [
-    { name: "Coca-Cola Zero", brand: brands.first, barcode: "5449000131836", valid_to: 1.years.from_now, location: locations.first },
-    { name: "Oat Flakes", brand: brands.second, barcode: "4606272022663", valid_to: 3.years.from_now, location: locations.second },
-    { name: "Pickles", brand: brands.third, valid_to: 15.years.from_now, location: locations.third },
-  ]
-)
+locations = []
+brands = []
+items = []
+
+100.times do
+  brands.append({name: Faker::Company.name})
+end
+created_brands = Brand.create(brands)
+
+10.times do
+  locations.append({name: Faker::House.room})
+end
+created_locations = Location.create(locations)
+
+1500.times do
+  items.append({name: Faker::Food.ingredient, valid_to: rand(100).months.from_now, barcode: rand.to_s[2..13], brand: created_brands.sample, location: created_locations.sample})
+end
+Item.create(items)
