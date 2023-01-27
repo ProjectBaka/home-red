@@ -74,5 +74,5 @@ jobs:
       - name: Build
         uses: docker/build-push-action@v3
         with:
-          tags: ghcr.io/ProjectBaka/home-red:latest
+          tags: ghcr.io/projectbaka/home-red:latest
           target: runner
