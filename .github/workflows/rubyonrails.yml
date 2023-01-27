@@ -76,3 +76,4 @@ jobs:
         with:
           tags: ghcr.io/projectbaka/home-red:latest
           target: runner
+          push: true
