@@ -70,3 +70,4 @@ jobs:
         with:
           push: false
           tags: projectbaka/home-red:latest
+          target: runner
