@@ -1,3 +1,4 @@
+#!/bin/bash
 if [ $# -eq 0 ]; then
   # Create new or migrate existing database
   ./bin/rails db:prepare
