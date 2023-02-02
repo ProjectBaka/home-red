@@ -81,5 +81,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           tags: ghcr.io/projectbaka/home-red:latest
-          target: runner
           push: true

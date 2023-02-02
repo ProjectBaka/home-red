@@ -4,9 +4,18 @@ services:
     image: redis
     ports:
       - "6379:6379"
-  redis-admin:
-    image: rediscommander/redis-commander
-    ports:
-      - "6380:8081"
+  postgres:
+    image: postgres:15.1
     environment:
-      - REDIS_HOSTS=local:redis:6379
+      POSTGRES_PASSWORD: "passwd"
+      POSTGRES_DB: "baka_home"
+      POSTGRES_USER: "baka"
+  app:
+    image: ghcr.io/projectbaka/home-red:latest
+    environment:
+      DATABASE_URL: "postgres://baka:passwd@postgres/baka_home"
+      RAILS_ENV: "production"
+      SECRET_KEY_BASE: "CHANGEME"
+      REDIS_URL: "redis://redis:6379"
+    ports:
+      - "3000:3000"
